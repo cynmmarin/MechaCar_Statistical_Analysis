@@ -8,22 +8,18 @@ In this project we will be working with Jeremy, a Data Analyst at AutosRU to do 
 ## Linear Regression to Predict MPG
 Initially, we will determine which variables and coefficients provide a non-random amount of variance to the mpg values in the dataset. The dataset that will be used is the MechaCar, which contains the length, weight, spoiler angle, ground clearance, AWD and mpg of 50 vehicles.  
 The regression formula of the variables and coefficients of dataset is as follow:
-mpg = 6.27vehicle_length + .001vehicle_weight + .07spoiler_angle + 3.55ground_clearance - 3.41AWD -.01
-Residuals:
-     Min       1Q   Median       3Q      Max 
--19.4701  -4.4994  -0.0692   5.4433  18.5849 
-Coefficients:
-                   Estimate Std. Error t value Pr(>|t|)    
-(Intercept)      -1.040e+02  1.585e+01  -6.559 5.08e-08 ***
-vehicle_length    6.267e+00  6.553e-01   9.563 2.60e-12 ***
-vehicle_weight    1.245e-03  6.890e-04   1.807   0.0776 .  
-spoiler_angle     6.877e-02  6.653e-02   1.034   0.3069    
-ground_clearance  3.546e+00  5.412e-01   6.551 5.21e-08 ***
-AWD              -3.411e+00  2.535e+00  -1.346   0.1852  
 
-Residual standard error: 8.774 on 44 degrees of freedom
-Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
-F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
+mpg = 6.27vehicle_length + .001vehicle_weight + .07spoiler_angle + 3.55ground_clearance - 3.41AWD -.01
+
+
+
+
+
+
+
+
+
+
 
 We can observe that the vehicle weight, spoiler angle and AWD provided a non-random amount of variance to the mpg values. Meanwhile the given the Pr(>|t|)show that the vehicle length and ground clearance’s coefficients each contribute to a random amount of variance to the multi-linear model. In this case the given p-value of 5.35e-11 is less than 0.05 therefore, the slope of the model is not considered to be zero. 
 Given our R-squared of 71.5% we can determine that the model predicts the mpg of MechaCar prototypes effectively, however it leaves a little less than ~30% to random factors. This model would not be safe, but it does provide an insight in the impact of the given variables. 

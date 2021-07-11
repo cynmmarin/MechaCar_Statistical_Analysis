@@ -6,26 +6,20 @@ In this project we will be working with Jeremy, a Data Analyst at AutosRU to do 
 
 
 ## Linear Regression to Predict MPG
+
 Initially, we will determine which variables and coefficients provide a non-random amount of variance to the mpg values in the dataset. The dataset that will be used is the MechaCar, which contains the length, weight, spoiler angle, ground clearance, AWD and mpg of 50 vehicles.  
 The regression formula of the variables and coefficients of dataset is as follow:
 
 mpg = 6.27vehicle_length + .001vehicle_weight + .07spoiler_angle + 3.55ground_clearance - 3.41AWD -.01
 
+![Summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/3d033ed63a58b66612f1c6d6e2f8f26aee6b6be8/images/Summary.png)
 
-
-
-
-
-
-
-
-
-
-We can observe that the vehicle weight, spoiler angle and AWD provided a non-random amount of variance to the mpg values. Meanwhile the given the Pr(>|t|)show that the vehicle length and ground clearance’s coefficients each contribute to a random amount of variance to the multi-linear model. In this case the given p-value of 5.35e-11 is less than 0.05 therefore, the slope of the model is not considered to be zero. 
+	We can observe that the vehicle weight, spoiler angle and AWD provided a non-random amount of variance to the mpg values. Meanwhile the given the Pr(>|t|)show that the vehicle length and ground clearance’s coefficients each contribute to a random amount of variance to the multi-linear model. In this case the given p-value of 5.35e-11 is less than 0.05 therefore, the slope of the model is not considered to be zero. 
 Given our R-squared of 71.5% we can determine that the model predicts the mpg of MechaCar prototypes effectively, however it leaves a little less than ~30% to random factors. This model would not be safe, but it does provide an insight in the impact of the given variables. 
 
 
 ## Summary Statistics on Suspension Coils 
+
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. However, the current manufacturing data for lot 3 does exceed this design specification. Meanwhile the manufacturing lots for 1 and 2 remind below 100 pounds. 
 ![suspention_coils_total_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Suspention_Coils_total_summary_.png)
 ![Lot1_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Lot1_summary.png)

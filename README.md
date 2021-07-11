@@ -7,7 +7,7 @@ In this project we will be working with Jeremy, a Data Analyst at AutosRU to do 
 
 ## Linear Regression to Predict MPG
 
-Initially, we will determine which variables and coefficients provide a non-random amount of variance to the mpg values in the dataset. The dataset that will be used is the MechaCar, which contains the length, weight, spoiler angle, ground clearance, AWD and mpg of 50 vehicles.  
+Initially, we will determine which variables and coefficients provide a non-random amount of variance to the mpg values in the dataset. The dataset that will be used is the MechaCar, which contains the length, weight, spoiler angle, ground clearance, all-wheel drive (AWD) and miles per gallon (mpg) of 50 vehicles.  
 The regression formula of the variables and coefficients of dataset is as follow:
 
 mpg = 6.27vehicle_length + .001vehicle_weight + .07spoiler_angle + 3.55ground_clearance - 3.41AWD -.01
@@ -17,6 +17,10 @@ mpg = 6.27vehicle_length + .001vehicle_weight + .07spoiler_angle + 3.55ground_cl
 We can observe that the vehicle weight, spoiler angle and AWD provided a non-random amount of variance to the mpg values. Meanwhile the given the Pr(>|t|)show that the vehicle length and ground clearanceÕs coefficients each contribute to a random amount of variance to the multi-linear model. In this case the given p-value of 5.35e-11 is less than 0.05 therefore, the slope of the model is not considered to be zero. 
 
 Given our R-squared of 71.5% we can determine that the model predicts the mpg of MechaCar prototypes effectively, however it leaves a little less than ~30% to random factors. This model would not be safe, but it does provide an insight in the impact of the given variables. 
+
+Overall, MechaCar data has been provided, lack the ability to properly complete an analysis on the variables that alter the mpg. A recommendation would be to obtain information about the mass and frontal area, these variables have a greater impact on the performance of the mpg and thus can provide a more accurate representation of the variables that make a significant impact on the vehicleÕs performance.
+ 
+
 
 
 ## Summary Statistics on Suspension Coils 
@@ -28,7 +32,7 @@ The design specifications for the MechaCar suspension coils dictate that the var
 ![Lot2_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Lot2_summary.png)
 ![Lot3_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Lot3_summary.png)
 
-## Deliverable 3: T-Test on Suspension Coils
+## T-Test on Suspension Coils
 
 When we write an RScript using the t.test() function to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch, we make the following findings. 
 
@@ -53,6 +57,18 @@ Next, when we create three more RScripts using the t.test() function and its sub
 
 Based on our results, the p-value for the Suspension Coil 0.06 when compared to the p-value of Lot1 of 1 and Lot2 of 0.61 we can determine that these lots are not statistically different from the population mean. However, Lot3 has a p-value of 0.04 which shows that the manufacturing lost is statistically different from the mean. 
 
- 
 
 
+Base
+
+1. Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
+2. In your description, address the following questions:
+* What metric or metrics are you going to test?
+* What is the null hypothesis or alternative hypothesis?
+* What statistical test would you use to test the hypothesis? And why?
+* What data is needed to run the statistical test?
+
+
+
+For mpg: Mass and frontal area 
+Underbody treatment ---> ground clearance when you have a vehicle that has no under body treatment 

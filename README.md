@@ -21,11 +21,9 @@ Given our R-squared of 71.5% we can determine that the model predicts the mpg of
 Overall, MechaCar data has been provided, lack the ability to properly complete an analysis on the variables that alter the mpg. A recommendation would be to obtain information about the mass and frontal area, these variables have a greater impact on the performance of the mpg and thus can provide a more accurate representation of the variables that make a significant impact on the vehicleÕs performance.
  
 
-
-
 ## Summary Statistics on Suspension Coils 
 
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. However, the current manufacturing data for lot 3 does exceed this design specification. Meanwhile the manufacturing lots for 1 and 2 remind below 100 pounds. 
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. However, the current manufacturing data for lot 3 does exceed this design specification. Meanwhile the manufacturing lots for 1 and 2 remind below 100 pounds. A reason for this can be that the vehicles in lot 3 are heavier than those on lot 1 and 2, therefore exceeding the design specification. It is recommended that the vehicles on lot 3, get further evaluated and re-designed to meet expectations. 
 
 ![suspention_coils_total_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Suspention_Coils_total_summary_.png)
 ![Lot1_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Lot1_summary.png)
@@ -34,7 +32,7 @@ The design specifications for the MechaCar suspension coils dictate that the var
 
 ## T-Test on Suspension Coils
 
-When we write an RScript using the t.test() function to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch, we make the following findings. 
+When we write an RScript using the t.test() function to determine if the spring rate across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch, we see that the sample mean is 1498.78. The sample mean is not statistically different from the population mean. 
 
 One Sample t-test
 
@@ -47,7 +45,7 @@ sample estimates:
 mean of x 
   1498.78
 
-Next, when we create three more RScripts using the t.test() function and its subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch, we find that:
+Next, when we create three more RScripts using the t.test() function and its subset() argument to determine if the spring rate for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch, we find that:
 
 ![t-test_on_lot1]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/t-test_on_Lot1.png)
 
@@ -55,20 +53,12 @@ Next, when we create three more RScripts using the t.test() function and its sub
 
 ![t-test_on_lot3]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/t-test_on_Lot3.png)
 
-Based on our results, the p-value for the Suspension Coil 0.06 when compared to the p-value of Lot1 of 1 and Lot2 of 0.61 we can determine that these lots are not statistically different from the population mean. However, Lot3 has a p-value of 0.04 which shows that the manufacturing lost is statistically different from the mean. 
+Based on our results, the p-value for the Suspension Coil 0.06 when compared to the p-value of lot 1 of 1 and lot 2 of 0.61 we can determine that these lots are not statistically different from the population mean. However, lot 3 has a p-value of 0.04 which shows that the manufacturing lost is statistically different from the mean. These findings can potentially align with our initial assumption that the vehicles on lot 3 are heavier than those on lot 1 and 2. This brings into play a new possibility, that is that the underbody treatment varies for these vehicles. If a significant number of vehicles, are heavy and closer to the ground than those in the other lots we can see how the mean suspension coil would differ. In other words, there is an error in manufacturing and the vehicles are not made as designed. 
+
+For MechaCar to have a higher performance against their competition, it would be recommended they focused on doing a deeper analysis of their present line. In order to better understand how to produce a vehicle that is efficient in providing the most miles per gallon, we would need to test for mass and underbody treatment. If the new data is provided, we take out the all-wheel drive, and complete the new linear regression:
+
+mpg = 6.27vehicle_length + .001vehicle_weight + .07spoiler_angle + 3.55ground_clearance +/- mass +/-underbody treatment -b
+  
+We would use a multi-regression would help us determine the impact that mass and underbody treatment have on the miles per gallon or if there in to change at all. Introducing these new variables may help MechaCar increase their competitive advantage in the automobile industry. 
 
 
-
-Base
-
-1. Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
-2. In your description, address the following questions:
-* What metric or metrics are you going to test?
-* What is the null hypothesis or alternative hypothesis?
-* What statistical test would you use to test the hypothesis? And why?
-* What data is needed to run the statistical test?
-
-
-
-For mpg: Mass and frontal area 
-Underbody treatment ---> ground clearance when you have a vehicle that has no under body treatment 

@@ -55,6 +55,8 @@ Next, when we create three more RScripts using the t.test() function and its sub
 
 Based on our results, the p-value for the Suspension Coil 0.06 when compared to the p-value of lot 1 of 1 and lot 2 of 0.61 we can determine that these lots are not statistically different from the population mean. However, lot 3 has a p-value of 0.04 which shows that the manufacturing lost is statistically different from the mean. These findings can potentially align with our initial assumption that the vehicles on lot 3 are heavier than those on lot 1 and 2. This brings into play a new possibility, that is that the underbody treatment varies for these vehicles. If a significant number of vehicles, are heavy and closer to the ground than those in the other lots we can see how the mean suspension coil would differ. In other words, there is an error in manufacturing and the vehicles are not made as designed. 
 
+## Study Design: MechCar vs Competition
+
 For MechaCar to have a higher performance against their competition, it would be recommended they focused on doing a deeper analysis of their present line. In order to better understand how to produce a vehicle that is efficient in providing the most miles per gallon, we would need to test for mass and underbody treatment. If the new data is provided, we take out the all-wheel drive, and complete the new linear regression:
 
 mpg = 6.27vehicle_length + .001vehicle_weight + .07spoiler_angle + 3.55ground_clearance +/- mass +/-underbody treatment -b

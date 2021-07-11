@@ -31,12 +31,13 @@ Given our R-squared of 71.5% we can determine that the model predicts the mpg of
 
 ## Summary Statistics on Suspension Coils 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. However, the current manufacturing data for lot 3 does exceed this design specification. Meanwhile the manufacturing lots for 1 and 2 remind below 100 pounds. 
-
+![suspention_coils_total_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Suspention_Coils_total_summary_.png)
+![Lot1_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Lot1_summary.png)
+![Lot2_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Lot2_summary.png)
+![Lot3_summary]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/Lot3_summary.png)
 
 ## Deliverable 3: T-Test on Suspension Coils
 
-hen briefly summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
- 
 When we write an RScript using the t.test() function to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch, we make the following findings. 
 
 One Sample t-test
@@ -52,11 +53,11 @@ mean of x
 
 Next, when we create three more RScripts using the t.test() function and its subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch, we find that:
 
-Lot1
+![t-test_on_lot1]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/t-test_on_Lot1.png)
 
-Lot2
+![t-test_on_lot2]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/t-test_on_Lot2.png)
 
-Lot3
+![t-test_on_lot3]( https://github.com/cynmmarin/MechaCar_Statistical_Analysis/blob/4bda469ed216ccad0337c057a6d41f7d694916f2/images/t-test_on_Lot3.png)
 
 Based on our results, the p-value for the Suspension Coil 0.06 when compared to the p-value of Lot1 of 1 and Lot2 of 0.61 we can determine that these lots are not statistically different from the population mean. However, Lot3 has a p-value of 0.04 which shows that the manufacturing lost is statistically different from the mean. 
 
